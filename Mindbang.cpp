@@ -5,6 +5,8 @@
 //TODO: implement infinite tape
 //TODO: implement running from tape or modifying prog
 //TODO: implement syscalls
+//TODO: implement pbrain-like procedures
+
 
 Mindbang::Mindbang(const char *proc) {
 	p = proc;
