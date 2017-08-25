@@ -3,7 +3,7 @@
 
 class Mindbang {
   public:
-    char tape[10000] = {0};
+    char tape[30000] = {0};
     char *t;
     const char *p;
     const char *p_s;
@@ -17,7 +17,7 @@ class Mindbang {
 	void dGet();
 	void whlB();
 	void whlE();
-	void proc();
+	int  proc();
 	
 	void dump();
 	void sleep(unsigned int mseconds);

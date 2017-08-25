@@ -1,6 +1,11 @@
 #include "Mindbang.hpp"
-//TODO: Implement negative tape
+//TODO: implement negative tape
 //TODO: implement jmp
+//TODO: implement file reads
+//TODO: implement infinite tape
+//TODO: implement running from tape or modifying prog
+//TODO: implement syscalls
+
 Mindbang::Mindbang(const char *proc) {
 	p = proc;
 	p_s = p;
@@ -56,7 +61,7 @@ void Mindbang::Mindbang::whlE() {
 	}
 }
 
-void Mindbang::proc() {
+int Mindbang::proc() {
 	while (*p) {
 		switch (*p) {
 		case '>':
@@ -86,6 +91,7 @@ void Mindbang::proc() {
 		}
 		p++;
 	}
+	return *t;
 }
 
 void Mindbang::dump() {
